@@ -1,4 +1,5 @@
 # language: es
+
 Característica: Cobro por permanencia en el parqueadero BikeParq
   Como cajero del parqueadero
   quiero que el sistema calcule el cobro
@@ -9,15 +10,18 @@ Característica: Cobro por permanencia en el parqueadero BikeParq
     Cuando permanece 60 minutos
     Entonces el cobro es de 3000 pesos
 
+
   Escenario: Un vehículo que entra de noche paga recargo nocturno
     Dado una tarifa de 3000 pesos
     Cuando el vehículo entró a las 22 horas
     Entonces el total a pagar es de 5000 pesos
 
+
   Escenario: Un vehículo que entra de día no paga recargo
     Dado una tarifa de 3000 pesos
     Cuando el vehículo entró a las 10 horas
     Entonces el total a pagar es de 3000 pesos
+
 
   Escenario: Un vehículo con tarifa cero de noche no paga recargo
     Dado una tarifa de 0 pesos
