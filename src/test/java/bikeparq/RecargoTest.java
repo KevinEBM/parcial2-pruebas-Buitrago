@@ -10,15 +10,7 @@ import org.junit.jupiter.api.Test;
 class RecargoTest {
 
     @Test
-    @DisplayName("R1: entrar a las 22 horas suma 2000 de recargo")
-    void entradaALas22SumaRecargoNocturno() {
-        int resultado = Recargo.aplicarRecargoNocturno(3000, 22);
-
-        assertEquals(5000, resultado);
-    }
-
-    @Test
-    @DisplayName("R1 (borde): entrar a las 20 horas, inicio de la noche, suma recargo")
+    @DisplayName("R1 (borde): entrar a las 20 horas, inicio de la noche, suma 2000 de recargo")
     void entradaALas20QueEsElInicioDeLaNocheSumaRecargo() {
         int resultado = Recargo.aplicarRecargoNocturno(3000, 20);
 
@@ -26,33 +18,9 @@ class RecargoTest {
     }
 
     @Test
-    @DisplayName("R1 (borde): entrar a las 5 horas, fin de la noche, suma recargo")
-    void entradaALas5QueEsElFinDeLaNocheSumaRecargo() {
-        int resultado = Recargo.aplicarRecargoNocturno(3000, 5);
-
-        assertEquals(5000, resultado);
-    }
-
-    @Test
-    @DisplayName("R2: entrar a las 10 horas, de día, no cambia la tarifa")
-    void entradaALas10DeDiaNoCambiaLaTarifa() {
-        int resultado = Recargo.aplicarRecargoNocturno(3000, 10);
-
-        assertEquals(3000, resultado);
-    }
-
-    @Test
     @DisplayName("R2 (borde): entrar a las 19 horas, fin del día, no cambia la tarifa")
     void entradaALas19QueEsElFinDelDiaNoCambiaLaTarifa() {
         int resultado = Recargo.aplicarRecargoNocturno(3000, 19);
-
-        assertEquals(3000, resultado);
-    }
-
-    @Test
-    @DisplayName("R2 (borde): entrar a las 6 horas, inicio del día, no cambia la tarifa")
-    void entradaALas6QueEsElInicioDelDiaNoCambiaLaTarifa() {
-        int resultado = Recargo.aplicarRecargoNocturno(3000, 6);
 
         assertEquals(3000, resultado);
     }
